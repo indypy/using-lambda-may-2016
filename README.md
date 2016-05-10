@@ -1,4 +1,4 @@
-# IndyPy May 2016 -- Using Python with AWS Lambda
+# IndyPy May 2016: Using Python with AWS Lambda
 
 The `slides.rst` can be generated using [Hovercraft](http://hovercraft.readthedocs.io). But the exciting stuff is in the `hello_world` and `create_thumbs` directories.
 
