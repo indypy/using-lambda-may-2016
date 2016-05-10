@@ -167,3 +167,8 @@ Lambda Telephone Game
 Questions?
 ==========
 
+Sample Code and Slides
+++++++++++++++++++++++
+
+https://github.com/indypy/using-lambda-may-2016
+
