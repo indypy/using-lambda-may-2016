@@ -27,7 +27,7 @@ def lambda_handler(event, context):
         im = Image.open('/tmp/'+filename)
         im.thumbnail(size)
         im.save('/tmp/'+thumb_name, "JPEG")
-        s3_client.upload_file('/tmp/'+thumb_name, bucket, thumb_name)
+        s3_client.upload_file('/tmp/'+thumb_name, bucket, 'thumbs/'+thumb_name)
     except Exception as e:
         print(e)
         print('Error getting object {} from bucket {}. Make sure they exist \
