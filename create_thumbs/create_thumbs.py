@@ -1,5 +1,6 @@
 from __future__ import print_function
 
+import os
 import urllib
 import boto3
 
@@ -16,11 +17,9 @@ def lambda_handler(event, context):
     # Get the object from the event and create a thumbnail
     bucket = event['Records'][0]['s3']['bucket']['name']
     key = urllib.unquote_plus(event['Records'][0]['s3']['object']['key']).decode('utf8')
-    image_name, ext = key.rsplit('.', 1)
-    path, image_name = image_name.rsplit('/', 1)
-
-    filename = image_name + '.' + ext
-    thumb_name = image_name + "_thumb." + ext
+    path, filename = os.path.split(key)
+    image_name, ext = os.path.splitext(filename)
+    thumb_name = image_name + "_thumb" + ext
 
     try:
         s3_client.download_file(bucket, key, '/tmp/'+filename)
