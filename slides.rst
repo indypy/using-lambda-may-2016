@@ -51,9 +51,9 @@ Six Feet Up, Inc.
 What is AWS Lambda?
 ===================
 
-* Serverless computing
+* Server-less computing
 * Event-driven
-* Continous Scaling
+* Continuous Scaling
 
 ----
 
@@ -128,7 +128,7 @@ Hello Lambda
 
 * Simple
 * TTW
-* No dependancies
+* No dependencies
 * API Endpoint
 
 ----
