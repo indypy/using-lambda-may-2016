@@ -66,6 +66,30 @@ What runs on Lambda?
 
 ----
 
+What kinds of things do people do with Lambda?
+==============================================
+
+* S3
+* Kinesis
+* DynamoDB
+* SNS
+* API Gateway
+* Mobile Backend
+* Scheduled Events
+* AWS IoT
+* Alexa Events
+
+.. note::
+    Async calls use the Event invocation type and the return is discarded.
+
+    Kinesis can work sync or async and can read in batches of records coming from a stream
+
+    Lambda can subscribe to SNS topics even across accounts
+
+    More event sources are being added such as Cognito Sync Triggers
+
+----
+
 What does Lambda Cost?
 ======================
 
@@ -84,15 +108,61 @@ Per Compute time
 * Allows up to 1.5GB instances (266,667 seconds free)
 * Billing is metered in increments of 100 milliseconds
 
+.. note::
+    All calls made to AWS Lambda must complete execution within 300 seconds
 
 ----
 
+Let's do Python with Lambda
+===========================
 
-Each Lambda function receives 500MB of non-persistent disk space in its own /tmp directory
+* Python 2.7
+* Include Standard Library
+* Includes the AWS SDK library, Boto 3
+* You can bundle anything else you like
 
-All calls made to AWS Lambda must complete execution within 300 seconds
+----
 
-Includes the AWS SDK library, Boto 3
+Hello Lambda
+============
+
+* Simple
+* TTW
+* No dependancies
+* API Endpoint
+
+----
+
+Fetch Lambda, Good Dog
+======================
+
+* S3 Events
+* Fetch Files
+* Use Pillow to Convert Images
+* Put the Converted Files Back
+
+Some Pre-packaged Binaries for Lambda
++++++++++++++++++++++++++++++++++++++
+
+https://github.com/Miserlou/lambda-packages
+
+
+.. note::
+
+    Each Lambda function receives 500MB of non-persistent disk space in its own /tmp directory
+
+    Binary compiles can be made and just need to run on Amazon Linux
+
+----
+
+Lambda Telephone Game
+=====================
+
+* API Gateway
+* Webhook Target for ZenDesk
+* Use Requests to call another Webhook in Pingdom
+
+----
 
 Questions?
 ==========
